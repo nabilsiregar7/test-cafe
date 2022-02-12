@@ -9,9 +9,9 @@ test('Succesfully logged into the page', async t => {
     const btnSubmit = Selector (`button`)
     const lblSuccess = Selector (`#flash`).innerText
 
-    await t.takeScreenshot({ fullPage:true})
+    // await t.takeScreenshot({ fullPage:true})
     await t.typeText(txtUsername, "tomsmith")
     await t.typeText(txtPassword, "SuperSecretPassword!")
     await t.click(btnSubmit)
-    await t.expect(lblSuccess).contains('You logged into')
+    await t.expect(lblSuccess).contains('You logged')
 })

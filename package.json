@@ -4,7 +4,7 @@
   "description": "Automation with Testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests"
+    "test": "testcafe chrome ./tests -s takeOnFails=true"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,9 @@
 # Node artifact files
 node_modules/
 screenshoots/
+thumbnails/
+*.png
+*.jpg
 
 # Compiled class file
 *.class

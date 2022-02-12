@@ -4,7 +4,8 @@
   "description": "Automation with Testcafe",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests -s takeOnFails=true"
+    "test": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
+    "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true --disable-page-caching"
   },
   "repository": {
     "type": "git",

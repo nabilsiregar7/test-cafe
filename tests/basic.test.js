@@ -41,4 +41,26 @@ test('Succesfully logged into the page', async t => {
     await t.takeElementScreenshot()
     // Resize window
     await t.resizeWindow(800, 200)
+
+    // Deep equal
+    await t.expect('foo').eql('foo', 'message', options)
+    // Not deep equal
+    await t.expect('foo').notEql('foo')
+    // OK
+    await t.expect(true).ok()
+    // Not OK
+    await t.expect(true).notOk()
+    // Contains
+    await t.expect('foo').contains('o')
+    // Not contains
+    await t.expect('foo').notContains('hey')
+    // Greater or less than
+    await t.expect(10).gt(10)
+    await t.expect(10).gte(10)
+    await t.expect(10).lt(10)
+    await t.expect(10).lte(10)
+    // Within
+    await t.expect(10).within(1, 100)
+    // Not within
+    await t.expect(10).notWithin(5, 50)
 })

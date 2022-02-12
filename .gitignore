@@ -1,5 +1,10 @@
 # Node artifact files
 node_modules/
+screenshots/
+thumbnails/
+*.png
+*.jpg
+*.jpeg
 
 # Compiled class file
 *.class

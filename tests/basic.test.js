@@ -2,10 +2,20 @@ import { Selector } from 'testcafe'
 
 fixture `Getting started with TestCafe`
     .page `https://the-internet.herokuapp.com/login`
+    .beforeEach(async t => {
+        await t.setTestSpeed(1)
+        await t.setPageLoadTimeout(0)
+    })
 
 test('Succesfully logged into the page', async t => {
-    await t.typeText('#username', "tomsmith")
-    await t.typeText('#password', "SuperSecretPassword!")
-    await t.click('button')
-    await t.expect(Selector('#flash').innerText).contains('You logged into')
+    const txtUsername = Selector (`#username`)
+    const txtPassword = Selector (`#password`)
+    const btnSubmit = Selector (`button`)
+    const lblSuccess = Selector (`#flash`).innerText
+
+    // await t.takeScreenshot({ fullPage:true})
+    await t.typeText(txtUsername, "tomsmith")
+    await t.typeText(txtPassword, "SuperSecretPassword!")
+    await t.click(btnSubmit)
+    await t.expect(lblSuccess).contains('You logged')
 })

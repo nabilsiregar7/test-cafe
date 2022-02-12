@@ -4,6 +4,7 @@ screenshoots/
 thumbnails/
 *.png
 *.jpg
+*.jpeg
 
 # Compiled class file
 *.class

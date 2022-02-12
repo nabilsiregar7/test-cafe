@@ -2,6 +2,10 @@ import { Selector } from 'testcafe'
 
 fixture `Getting started with TestCafe`
     .page `https://the-internet.herokuapp.com/login`
+    .beforeEach(async t => {
+        await t.setTestSpeed(1)
+        await t.setPageLoadTimeout(0)
+    })
 
 test('Succesfully logged into the page', async t => {
     const txtUsername = Selector (`#username`)

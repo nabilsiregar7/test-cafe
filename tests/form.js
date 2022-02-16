@@ -1,4 +1,4 @@
-import { Selector, testController } from "testcafe";
+import { Selector } from "testcafe";
 import FormPage from '../page-objects/components/form-page'
 
 const formPage = new FormPage()

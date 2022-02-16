@@ -1,8 +1,8 @@
 # README #
 
 # INSTALLATION #
-* npm init
-* npm install testcafe
+* `npm init`
+* `npm install testcafe`
 
 # RUN #
-* npm run <test-scripts inside package.json>
+* `npm run test` to run

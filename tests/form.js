@@ -3,7 +3,7 @@ import FormPage from '../page-objects/components/form-page'
 
 const formPage = new FormPage()
 
-fixture `Aquabot Testing`
+fixture `Aquabot Testing Form`
     .page `https://aquabottesting.com/`
     .beforeEach(async t => {
         await t.setPageLoadTimeout(0)

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "testcafe chrome ./tests -s takeOnFails=true skipJsErrors=true --disable-page-caching",
-    "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true --disable-page-caching"
+    "test:chrome:headless": "testcafe chrome:headless ./tests -s takeOnFails=true skipJsErrors=true --disable-page-caching",
+    "test:chrome:5": "testcafe -c 5 chrome ./tests -s takeOnFails=true skipJsErrors=true --disable-page-caching",
+    "test:chrome:headless:5": "testcafe -c 5 chrome:headless ./tests -s takeOnFails=true skipJsErrors=true --disable-page-caching",
+    "test:multiple": "testcafe chrome,safari ./tests -s takeOnFails=true skipJsErrors=true --disable-page-caching"    
   },
   "repository": {
     "type": "git",

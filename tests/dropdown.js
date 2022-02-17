@@ -12,6 +12,9 @@ fixture `Aquabot Testing Dropdown`
         const togDropdown = Selector('.slider')
         const ddTogle = Selector('#custom-select')
         const togList = Selector('#color-select').find('option')
+        const rbGames = Selector('#games')
+        const ddGames = Selector('#react-select')
+        const ggGamesList = ddGames.find('option')
 
         await t
             .hover(ddMenu)
@@ -20,4 +23,9 @@ fixture `Aquabot Testing Dropdown`
             .click(togDropdown)
             .click(ddTogle)
             .click(togList.withText('Green'))
+
+            .click(rbGames)
+            .click(ddGames)
+            .click(ggGamesList.withText('Fall Guys'))
+            .expect(ddGames.value).eql('Fall Guys')
     })
